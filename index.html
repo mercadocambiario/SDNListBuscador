@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Individuos</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-[#F5F5DC] text-gray-800">
+    <!-- Header con fondo hueso y contenido centrado -->
+    <header class="bg-[#fffdd0] py-4">
+        <div class="container mx-auto flex flex-col items-center">
+            <img src="img/ofac.png" alt="Logo OFAC" class="w-16 h-16">
+            <h1 class="text-3xl font-bold mt-2">Lista de Individuos</h1>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-6">
+        <!-- Sección de buscador -->
+        <section id="buscador" class="mb-8">
+            <form id="searchForm" action="#" method="GET" class="flex flex-col sm:flex-row items-center gap-4">
+                <label for="query" class="text-lg">Buscar individuo:</label>
+                <input type="text" id="query" name="query" placeholder="Ingresa el nombre o dato..." required
+                       class="flex-1 p-2 border border-gray-300 rounded">
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    Buscar
+                </button>
+            </form>
+        </section>
+
+        <!-- Alerta para matches de individuos -->
+        <div id="alerta" class="mb-4 text-red-600 font-semibold">
+            Se encontraron X cantidad de similares
+        </div>
+
+        <!-- Sección para mostrar resultados en grid -->
+        <section id="resultados">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Ejemplo de resultado individual -->
+                <div class="grid-item p-4 border border-gray-300 rounded shadow hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                     tabindex="0">
+                    <h2 class="text-xl font-bold mb-2">Nombre del individuo</h2>
+                    <p class="mb-1"><span class="font-semibold">Nacionalidad:</span> Ejemplo</p>
+                    <p><span class="font-semibold">Aliases:</span> Alias 1, Alias 2</p>
+                </div>
+                <!-- Aquí se agregarán más items dinámicamente -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#fffdd0] py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mercado Cambiario. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlaza tus scripts locales -->
+    <script src="script.js"></script>
+</body>
+</html>
